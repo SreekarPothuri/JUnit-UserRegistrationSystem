@@ -25,27 +25,18 @@ public class EmailTest {
 	public void testEmailWithThreeMandatoryFeilds_testAssertionHappy() {
 		boolean result = user.email("sreekar@gmail.com");
 		Assert.assertTrue(result);
-
-		//assertEquals(true,user.email("sreekar@gmail.com"));
-		//System.out.println("Email: Happy Test 1");
 	}
 	
 	@Test
 	public void testEmailWithoutThreeMandatoryFeilds_testAssertionHappy() {
 		boolean result = user.email("sreekar@.com");
 		Assert.assertFalse(result);
-
-		//assertEquals(false,user.email("sreekar@.com"));
-		//System.out.println("Email: Happy Test 2");
 	}
 	
 	@Test
 	public void testEmailWithoutThreeMandatoryFeilds_testAssertionSad() {
 		boolean result = user.email("sreekar2@gmail");
 		Assert.assertTrue(result);
-
-		//assertEquals(true,user.email("Sreekar2@gmail.co"));
-		//System.out.println("Email: Sad Test 1");
 	}
 	
 	
@@ -53,9 +44,5 @@ public class EmailTest {
 	public void testEmailWithThreeMandatoryFeilds_testAssertionSad() {
 		boolean result = user.email("sreekar@gmil.co");
 		Assert.assertFalse(result);
-
-		//assertEquals(false,user.email("sreekar"));
-		//System.out.println("Email: Sad Test 2");
 	}
-
 }
